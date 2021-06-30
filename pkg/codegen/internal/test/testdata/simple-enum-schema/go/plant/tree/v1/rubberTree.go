@@ -75,11 +75,11 @@ func (RubberTreeState) ElementType() reflect.Type {
 }
 
 type rubberTreeArgs struct {
-	Container *plant.Container `pulumi:"container"`
-	Diameter  float64          `pulumi:"diameter"`
-	Farm      *string          `pulumi:"farm"`
-	Size      *string          `pulumi:"size"`
-	Type      string           `pulumi:"type"`
+	Container *plant.Container  `pulumi:"container"`
+	Diameter  float64           `pulumi:"diameter"`
+	Farm      *string           `pulumi:"farm"`
+	Size      *string           `pulumi:"size"`
+	Type      RubberTreeVariety `pulumi:"type"`
 }
 
 // The set of arguments for constructing a RubberTree resource.

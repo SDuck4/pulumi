@@ -285,35 +285,35 @@ func (ContainerSize) ElementType() reflect.Type {
 }
 
 func (e ContainerSize) ToContainerSizeOutput() ContainerSizeOutput {
-	return pulumi.ToOutput(ContainerSize(e)).(ContainerSizeOutput)
+	return pulumi.ToOutput(e).(ContainerSizeOutput)
 }
 
 func (e ContainerSize) ToContainerSizeOutputWithContext(ctx context.Context) ContainerSizeOutput {
-	return pulumi.ToOutputWithContext(ctx, ContainerSize(e)).(ContainerSizeOutput)
+	return pulumi.ToOutputWithContext(ctx, e).(ContainerSizeOutput)
 }
 
 func (e ContainerSize) ToContainerSizePtrOutput() ContainerSizePtrOutput {
-	return ContainerSize(e).ToContainerSizePtrOutputWithContext(context.Background())
+	return e.ToContainerSizePtrOutputWithContext(context.Background())
 }
 
 func (e ContainerSize) ToContainerSizePtrOutputWithContext(ctx context.Context) ContainerSizePtrOutput {
-	return ContainerSize(e).ToContainerSizeOutputWithContext(ctx).ToContainerSizePtrOutputWithContext(ctx)
+	return e.ToContainerSizeOutputWithContext(ctx).ToContainerSizePtrOutputWithContext(ctx)
 }
 
 func (e ContainerSize) ToIntOutput() pulumi.IntOutput {
-	return pulumi.ToOutput(pulumi.Int(e)).(pulumi.IntOutput)
+	return pulumi.ToOutput(e).(pulumi.IntOutput)
 }
 
 func (e ContainerSize) ToIntOutputWithContext(ctx context.Context) pulumi.IntOutput {
-	return pulumi.ToOutputWithContext(ctx, pulumi.Int(e)).(pulumi.IntOutput)
+	return pulumi.ToOutputWithContext(ctx, e).(pulumi.IntOutput)
 }
 
 func (e ContainerSize) ToIntPtrOutput() pulumi.IntPtrOutput {
-	return pulumi.Int(e).ToIntPtrOutputWithContext(context.Background())
+	return e.ToIntPtrOutputWithContext(context.Background())
 }
 
 func (e ContainerSize) ToIntPtrOutputWithContext(ctx context.Context) pulumi.IntPtrOutput {
-	return pulumi.Int(e).ToIntOutputWithContext(ctx).ToIntPtrOutputWithContext(ctx)
+	return e.ToIntOutputWithContext(ctx).ToIntPtrOutputWithContext(ctx)
 }
 
 type ContainerSizeOutput struct{ *pulumi.OutputState }
@@ -400,4 +400,13 @@ func (in *containerSizePtr) ToContainerSizePtrOutput() ContainerSizePtrOutput {
 
 func (in *containerSizePtr) ToContainerSizePtrOutputWithContext(ctx context.Context) ContainerSizePtrOutput {
 	return pulumi.ToOutputWithContext(ctx, in).(ContainerSizePtrOutput)
+}
+
+func init() {
+	pulumi.RegisterOutputType(ContainerSizeOutput{})
+	pulumi.RegisterOutputType(ContainerSizePtrOutput{})
+	pulumi.RegisterOutputType(ContainerColorOutput{})
+	pulumi.RegisterOutputType(ContainerColorPtrOutput{})
+	pulumi.RegisterOutputType(ContainerBrightnessOutput{})
+	pulumi.RegisterOutputType(ContainerBrightnessPtrOutput{})
 }

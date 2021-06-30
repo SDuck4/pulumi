@@ -621,3 +621,16 @@ func (o TreeSizeMapOutput) MapIndex(k pulumi.StringInput) TreeSizeOutput {
 		return vs[0].(map[string]TreeSize)[vs[1].(string)].ToTreeSizeOutput()
 	}).(TreeSizeOutput)
 }
+
+func init() {
+	pulumi.RegisterOutputType(RubberTreeVarietyOutput{})
+	pulumi.RegisterOutputType(RubberTreeVarietyPtrOutput{})
+	pulumi.RegisterOutputType(RubberTreeVarietyArrayOutput{})
+	pulumi.RegisterOutputType(FarmOutput{})
+	pulumi.RegisterOutputType(FarmPtrOutput{})
+	pulumi.RegisterOutputType(DiameterOutput{})
+	pulumi.RegisterOutputType(DiameterPtrOutput{})
+	pulumi.RegisterOutputType(TreeSizeOutput{})
+	pulumi.RegisterOutputType(TreeSizePtrOutput{})
+	pulumi.RegisterOutputType(TreeSizeMapOutput{})
+}
